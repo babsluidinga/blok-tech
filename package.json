@@ -4,7 +4,7 @@
   "description": "project babs luidinga voor blok tech",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "dev": "nodemon --ignore feedback.json index.js"
   },
   "repository": {
     "type": "git",
