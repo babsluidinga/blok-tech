@@ -2,9 +2,9 @@
   "name": "blok-tech-2021",
   "version": "1.0.0",
   "description": "project babs luidinga voor blok tech",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon --ignore feedback.json index.js"
+    "dev": "nodemon --ignore feedback.json server.js"
   },
   "repository": {
     "type": "git",
