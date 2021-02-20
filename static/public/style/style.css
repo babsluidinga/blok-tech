@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header.home{
+    background-image: url(../img/hero-image.jpg);
+    background-size: cover;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+}
+nav{
+    background-color: white;
+    color: black;
+    height: 5em;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content:space-between;
+}
+
+nav ul div{
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li{
+    margin: 1em;
+    padding: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
