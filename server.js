@@ -4,6 +4,8 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+require('dotenv').config();
+
 // set view directory
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
