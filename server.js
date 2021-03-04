@@ -1,9 +1,7 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
-const assert = require('assert');
-const { forOwn } = require('lodash');
-
+const model = require('./models/model');
 require('dotenv').config();
 
 const port = 3000;
@@ -13,6 +11,9 @@ const app = express();
 
 // Connect mongoDB to server
 mongoose.connect(url, { useUnifiedTopology: true, useFindAndModify: false });
+
+app.use(express.json());
+app.use(urlEncodedParser);
 
 // set view directory
 app.set('view engine', 'ejs');
@@ -38,6 +39,22 @@ app.get('/login', (req, res) => {
 // error handling
 app.get('*', (req, res) => {
   res.status(404).render('pages/error', { pageTitle: 'oops..' });
+});
+
+async function getData() {
+  const data = await model.find({}).lean();
+  console.log(data);
+}
+
+function createNewUser(user) {
+  const foo = new model({
+    name: user.name,
+    age: user.age,
+    gender: user.gender,
+  });
+}
+foo.save((error) => {
+  error ? console.log(`Something went wrong: ${error}`) : console.log('foo');
 });
 
 // testing
