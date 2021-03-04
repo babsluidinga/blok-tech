@@ -4,15 +4,23 @@
     <%- include('../partials/head.ejs'); %>
   </head>
   <body>
-    <header class="home">
-      <%- include('../partials/nav.ejs'); %>
+    <header class="home"><%- include('../partials/nav.ejs'); %></header>
+    <main>
       <section>
-        <h1>Find your bookworm</h1>
-        <p>
-          Klaar om liefde te vinden? Vertel ons wat er in jouw boekenkast staat en laat je
-          verassen..
-        </p>
+        <h1>Find your magical match</h1>
+        <form method="POST" action="/profiel">
+          <label id="name" for="name">Naam</label>
+          <input name="name" type="text" />
+          <label id="age" for="age">Age</label>
+          <input name="age" type="number" />
+          <label for="genderPreference">Male</label>
+          <input name="gender" type="radio" />
+          <label for="genderPreference">Female</label>
+          <input name="gender" type="radio" />
+          <label for="genderPreference">no preference</label>
+          <input name="gender" type="radio" />
+        </form>
       </section>
-    </header>
+    </main>
   </body>
 </html>
